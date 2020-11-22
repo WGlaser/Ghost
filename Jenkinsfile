@@ -3,7 +3,7 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     echo 'Hi, GeekFlare. Starting to build the App.'
+                     echo 'Hi, Wade. Building App'
                  }
                  }
                  stage('Test') {
@@ -11,27 +11,7 @@ pipeline {
                     input('Do you want to proceed?')
                  }
                  }
-                 stage('Deploy') {
-                 parallel { 
-                           stage('Deploy start ') {
-                           steps {
-                                echo "Start the deploy .."
-                           } 
-                           }
-                            stage('Deploying now') {
-                            agent {
-                                    docker {
-                                            reuseNode true
-                                            image ‘alpine’
-                                           }
-                                    }
-                            
-                              steps {
-                                echo "Docker Created"
-                              }
-                           }
-                           }
-                           }
+               
                  stage('Prod') {
                      steps {
                                 echo "App is Prod Ready"
