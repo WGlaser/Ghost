@@ -18,7 +18,7 @@ pipeline {
        sh 'npm install -g'
        sh 'npm install ghost-cli -g'
        
-       sh 'npm config ls -l'
+       sh 'ls'
       }
     }  
     
