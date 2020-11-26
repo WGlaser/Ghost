@@ -11,10 +11,11 @@ pipeline {
       steps {
        git 'https://github.com/WGlaser/Ghost'
        sh 'rm -rf ./node_modules'
+          
        sh 'npm cache clear --force'
+           sh 'npm install -g;
        sh 'npm install yarn -g'
-       sh 'npm install -g'
-       sh 'npm update'
+      
        sh 'npm install ghost-cli -g'
       }
     }  
