@@ -14,6 +14,7 @@ pipeline {
        sh 'npm cache clear --force'
        sh 'npm install yarn -g'
        sh 'npm install -g'
+       sh 'npm update'
        sh 'npm install ghost-cli -g'
       }
     }  
