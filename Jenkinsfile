@@ -18,6 +18,7 @@ pipeline {
        sh 'npm install -g'
        sh 'npm install ghost-cli -g'
        sh 'npm install grunt'
+       sh 'npm config ls'
       }
     }  
     
