@@ -12,7 +12,7 @@ pipeline {
        git 'https://github.com/WGlaser/Ghost'
        sh 'rm -rf ./node_modules'
           
-       sh 'npm cache clear --force'
+       sh 'npm cache clean --force'
     
        sh 'npm install yarn -g'
        sh 'npm install -g;  
