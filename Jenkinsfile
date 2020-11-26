@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-       git 'https://github.com/WGlaser/Ghost'
-       PATH="/usr/local/bin:$PATH"
+       git 'https://github.com/WGlaser/Ghost.git'
+          
        sh 'rm -rf ./node_modules'
           
        sh 'npm cache clean --force'
