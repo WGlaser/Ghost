@@ -20,6 +20,7 @@ pipeline {
        sh 'npm install ghost-cli -g'
        sh 'npm install -g grunt-cli'
 sh 'npm install grunt'
+          sh'which grunt'
        
       }
     }  
