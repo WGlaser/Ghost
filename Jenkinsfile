@@ -17,6 +17,7 @@ pipeline {
        sh 'npm install yarn -g'
        sh 'npm install -g'
        sh 'npm install ghost-cli -g'
+       sh 'npm install grunt'
       }
     }  
     
