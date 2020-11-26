@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
        git 'https://github.com/WGlaser/Ghost'
+       export PATH="/usr/local/bin:$PATH"
        sh 'rm -rf ./node_modules'
           
        sh 'npm cache clean --force'
@@ -18,7 +19,7 @@ pipeline {
        sh 'npm install -g'
        sh 'npm install ghost-cli -g'
        
-       sh 'ls'
+       
       }
     }  
     
